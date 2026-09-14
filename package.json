@@ -1,0 +1,14 @@
+{
+  "name": "resturentproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd client && npm install && npm run build",
+    "start": "cd server && npm install --production && node src/server.js"    
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
