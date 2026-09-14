@@ -1,7 +1,7 @@
   import bcrypt from "bcryptjs";
   import User from "../model/user.model.js";
   import jwt from "jsonwebtoken";
-  import { hashPassword } from "../libs/Hashing.js";
+  import { hashPassword } from "../libs/hashing.js";
  import { GenerateToken, verifyToken } from "../libs/token.js";
   export const LoginController = async (req, res) => {
     try {
