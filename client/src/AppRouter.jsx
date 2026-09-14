@@ -15,7 +15,7 @@ import CreateMenu from "./pages/Admin/CreateMenu.jsx";
 import UserDashboard from "./pages/User/DashbordUser.jsx";
 import Cart from "./pages/User/Cart.jsx";
 import Orders from "./pages/User/Orders.jsx";
-import OrdersPage from "./pages/Admin/OrderPage.jsx";
+import OrderPage from "./pages/Admin/OrderPage.jsx";
 const AppRouter = () => {
   return (
      <>
@@ -80,7 +80,7 @@ const AppRouter = () => {
                 element={
                   <>
                     <Header />
-                    <OrdersPage />
+                    <OrderPage />
                     <Footer />
                   </>
                 }

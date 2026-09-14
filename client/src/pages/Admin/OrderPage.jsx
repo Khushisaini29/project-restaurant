@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import OrderStore from "../../store/OrderStore";
-import OrderHistory from "./ OrderHistory"
+import OrderHistory from "./OrderHistory";
 
-const OrdersPage = () => {
+const OrderPage = () => {
   const { orderData, fetchAdminOrder ,OrderStatusChange} = OrderStore();
 
   //   const handleStatusChange = async (orderId, newStatus) => {
@@ -43,4 +43,4 @@ const OrdersPage = () => {
   );
 };
 
-export default OrdersPage;
+export default OrderPage;
