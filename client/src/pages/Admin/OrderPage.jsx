@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import OrderStore from "../../store/OrderStore";
-import OrderHistory from "./OrderHistory";
+import OrderHistory from "./OrderHistory.jsx";
 
 const OrdersPage = () => {
   const { orderData, fetchAdminOrder ,OrderStatusChange} = OrderStore();
