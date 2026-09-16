@@ -1,3 +1,7 @@
+import dns from "node:dns";
+
+dns.setServers(["8.8.8.8", "1.1.1.1"]);
+
 import express from "express";
 import IndexRouter from "./route/index.route.js";
 import dbConnect from "./config/db.js";
@@ -23,7 +27,7 @@ const PORT = process.env.PORT || 5000;
 // CORS configuration fixed
 app.use(
   cors({
-    origin: process.env.APP_URL,
+    origin: "http://localhost:5173",
     credentials: true,
   })
 );

@@ -125,7 +125,7 @@ function Navbar() {
           ))}
 
           <Link
-            to="/signin"
+            to="/signup"
             className="px-5 py-3"
             style={{
               background: colors.gold,
@@ -136,7 +136,7 @@ function Navbar() {
               borderRadius: "2px",
             }}
           >
-            Book a Table
+            Sign In
           </Link>
         </nav>
 
@@ -186,7 +186,7 @@ function Navbar() {
               fontWeight: 600,
             }}
           >
-            Book a Table
+            Sign In
           </Link>
         </div>
       )}
@@ -753,209 +753,13 @@ function Testimonial() {
   );
 }
 
-function Reservation() {
-  return (
-    <section
-      id="contact"
-      className="py-24"
-      style={{ background: colors.cream }}
-    >
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16">
-
-        <div>
-          <p
-            style={{
-              color: colors.gold,
-              fontSize: "0.7rem",
-              letterSpacing: "0.25em",
-              textTransform: "uppercase",
-            }}
-          >
-            Come Visit
-          </p>
-
-          <h2
-            style={{
-              fontFamily: "Georgia, serif",
-              color: colors.dark,
-              fontSize: "clamp(2.4rem, 5vw, 4rem)",
-              fontWeight: 400,
-              lineHeight: 1.1,
-              marginTop: "0.8rem",
-            }}
-          >
-            Your table
-            <br />
-            <i>is waiting.</i>
-          </h2>
-
-          <div
-            style={{
-              color: "#655e56",
-              lineHeight: 1.8,
-              marginTop: "2rem",
-            }}
-          >
-            <p>18 Rue des Tanneurs</p>
-            <p>Paris, France</p>
-            <p style={{ marginTop: "1rem" }}>
-              +33 1 42 00 00 00
-            </p>
-          </div>
-
-          <div
-            className="mt-8"
-            style={{
-              borderTop: "1px solid #d8cfc3",
-              paddingTop: "1.2rem",
-              maxWidth: "350px",
-            }}
-          >
-            <div className="flex justify-between">
-              <span>Monday – Friday</span>
-              <span>12:00 – 23:00</span>
-            </div>
-
-            <div className="flex justify-between mt-3">
-              <span>Saturday</span>
-              <span>11:00 – 00:00</span>
-            </div>
-
-            <div className="flex justify-between mt-3">
-              <span>Sunday</span>
-              <span>11:00 – 22:00</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Reservation card */}
-        <div
-          style={{
-            background: colors.dark,
-            padding: "2.5rem",
-          }}
-        >
-          <h3
-            style={{
-              color: colors.white,
-              fontFamily: "Georgia, serif",
-              fontSize: "1.8rem",
-              fontWeight: 400,
-              marginBottom: "1.5rem",
-            }}
-          >
-            Reserve your table
-          </h3>
-
-          <form
-            className="flex flex-col gap-4"
-            onSubmit={(e) => e.preventDefault()}
-          >
-            <input
-              type="text"
-              placeholder="Your name"
-              className="w-full"
-              style={{
-                background: "transparent",
-                border: "1px solid #4a443d",
-                padding: "1rem",
-                color: colors.white,
-                outline: "none",
-              }}
-            />
-
-            <input
-              type="email"
-              placeholder="Email address"
-              style={{
-                background: "transparent",
-                border: "1px solid #4a443d",
-                padding: "1rem",
-                color: colors.white,
-                outline: "none",
-              }}
-            />
-
-            <div className="grid grid-cols-2 gap-4">
-              <input
-                type="date"
-                style={{
-                  background: "transparent",
-                  border: "1px solid #4a443d",
-                  padding: "1rem",
-                  color: colors.white,
-                }}
-              />
-
-              <select
-                style={{
-                  background: colors.dark,
-                  border: "1px solid #4a443d",
-                  padding: "1rem",
-                  color: colors.white,
-                }}
-              >
-                <option>2 Guests</option>
-                <option>3 Guests</option>
-                <option>4 Guests</option>
-                <option>5 Guests</option>
-                <option>6+ Guests</option>
-              </select>
-            </div>
-
-            <select
-              style={{
-                background: colors.dark,
-                border: "1px solid #4a443d",
-                padding: "1rem",
-                color: colors.white,
-              }}
-            >
-              <option>Select a time</option>
-              <option>6:00 PM</option>
-              <option>7:00 PM</option>
-              <option>8:00 PM</option>
-              <option>9:00 PM</option>
-            </select>
-
-            <button
-              type="submit"
-              style={{
-                background: colors.gold,
-                color: colors.dark,
-                border: "none",
-                padding: "1rem",
-                fontWeight: 600,
-                cursor: "pointer",
-                marginTop: "0.5rem",
-              }}
-            >
-              Request Reservation
-            </button>
-          </form>
-
-          <p
-            style={{
-              color: colors.muted,
-              fontSize: "0.7rem",
-              marginTop: "1rem",
-              textAlign: "center",
-            }}
-          >
-            Reservations are confirmed by email.
-          </p>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function Footer() {
   return (
     <footer
       style={{
-        background: colors.dark,
-        borderTop: "1px solid #39342e",
+        background: "#a3a09a",
+        borderTop: "1px solid #131212",
       }}
     >
       <div className="max-w-7xl mx-auto px-6 py-12">
@@ -965,7 +769,7 @@ function Footer() {
           <div>
             <h2
               style={{
-                color: colors.white,
+                color: colors.black,
                 fontFamily: "Georgia, serif",
                 fontSize: "1.6rem",
               }}
@@ -975,8 +779,8 @@ function Footer() {
 
             <p
               style={{
-                color: colors.muted,
-                fontSize: "0.8rem",
+                color: colors.black,
+                fontSize: "0.9rem",
                 marginTop: "0.5rem",
               }}
             >
@@ -987,21 +791,21 @@ function Footer() {
           <div className="flex gap-8">
             <a
               href="#menu"
-              style={{ color: colors.muted, textDecoration: "none" }}
+              style={{ color: colors.black, textDecoration: "none" }}
             >
               Menu
             </a>
 
             <a
               href="#about"
-              style={{ color: colors.muted, textDecoration: "none" }}
+              style={{ color: colors.black, textDecoration: "none" }}
             >
               About
             </a>
 
             <a
               href="#gallery"
-              style={{ color: colors.muted, textDecoration: "none" }}
+              style={{ color: colors.black, textDecoration: "none" }}
             >
               Gallery
             </a>
@@ -1012,10 +816,10 @@ function Footer() {
 
         <div
           style={{
-            borderTop: "1px solid #39342e",
+            borderTop: "1px solid #746b61",
             marginTop: "3rem",
             paddingTop: "1.5rem",
-            color: "#666058",
+            color: "#2e281f",
             fontSize: "0.7rem",
           }}
         >
@@ -1042,7 +846,6 @@ export default function Home() {
       <Experience />
       <Gallery />
       <Testimonial />
-      <Reservation />
       <Footer />
     </div>
   );

@@ -13,28 +13,40 @@ const Auth = create((set) => ({
   },
   SignInApi: async (data) => {
     try {
-      let result = await axiosClient.post("/auth/login", data);
-      set({ userData: result.data.data });
+      const result = await axiosClient.post("/auth/login", data);
 
-      set({ isAdmin: result.data.data.role });
+      set({
+        userData: result.data.data,
+        isAdmin: result.data.data.role,
+      });
+
       return result.data.success;
     } catch (error) {
-      console.log("error", error);
+      console.log(
+        "Login Error:",
+        error.response?.data || error.message
+      );
+
+      return false;
     }
   },
   checkAuthApi: async () => {
-    try {
-      let { data } = await axiosClient.get("/auth/check");
-      console.log(data);
-      set({ userData: data.token.id });
-      set({ isAdmin: data.token.role });
-      // if (data.success) {
-      //   window.location.href = "/dashboard";
-      // }
-    } catch (err) {
-      console.log("error", err);
-    }
-  },
+  try {
+    const { data } = await axiosClient.get("/auth/check");
+
+    console.log("Check Auth Response:", data);
+
+    set({
+      userData: data.token.id,
+      isAdmin: data.token.role,
+    });
+
+  } catch (err) {
+    console.log("CHECK AUTH ERROR:", err.response?.data);
+    console.log("STATUS:", err.response?.status);
+    console.log("MESSAGE:", err.message);
+  }
+},
   logoutApi: async () => {
     try {
       let { data } = await axiosClient.get("/auth/logout");
