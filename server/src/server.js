@@ -13,6 +13,7 @@ import OrderRouter from "./route/order.route.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import path from "path";
+import env from "./config/env.js"
 import { fileURLToPath } from "url";
 
 dotenv.config();
@@ -27,7 +28,7 @@ const PORT = process.env.PORT || 5000;
 // CORS configuration fixed
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: env.APP_URL,
     credentials: true,
   })
 );
