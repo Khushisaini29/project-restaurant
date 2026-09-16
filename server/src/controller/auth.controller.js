@@ -55,8 +55,8 @@ export const LoginController = async (req, res) => {
 
     res.cookie("jwt", token, {
       httpOnly: true,
-      secure: false,
-      sameSite: "lax",
+      secure: true,
+      sameSite: "none",
       maxAge: 180 * 24 * 60 * 60 * 1000,
     });
 
@@ -146,8 +146,8 @@ export const RegisterController = async (req, res) => {
     // Cookie
     res.cookie("jwt", token, {
       httpOnly: true,
-      secure: false,
-      sameSite: "lax",
+      secure: true,
+      sameSite: "none",
       maxAge: 180 * 24 * 60 * 60 * 1000,
     });
 
@@ -211,8 +211,8 @@ export const logoutController = async (req, res) => {
   try {
     res.clearCookie("jwt", {
       httpOnly: true,
-      secure: false,
-      sameSite: "lax",
+      secure: true,
+      sameSite: "none",
     });
 
     return res.status(200).json({
